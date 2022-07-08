@@ -9,7 +9,7 @@ const {
 
 const Users = require('../db/models/userModel');
 
-router.post('/signup', async (req, res, next) => {
+router.post('/register', async (req, res, next) => {
   try {
     const validBody = await validateRegister(req.body);
     if(validBody){
@@ -42,7 +42,6 @@ router.post('/login', async (req, res, next) => {
     if(validLogin && user){
       const validPassword = await bcrypt.compareSync(req.body.password, user._doc.password);
       if(validPassword){
-        console.log('Creating Json Web Token')
         delete user._doc.password;
         createJWT(user,res);
       } else {

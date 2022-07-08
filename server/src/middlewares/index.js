@@ -25,7 +25,6 @@ module.exports = {
             next(error);
           }
           req.user = user;
-          console.log(req.user);
           next();
         })
       } else {

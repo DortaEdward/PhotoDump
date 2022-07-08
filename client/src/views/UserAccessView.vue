@@ -7,7 +7,7 @@
       <div v-if="form" class="form-box">
         <h2>Login</h2>
         <div class="error-section" v-if="error">
-          <p class="error-message">There was an error</p>
+          <p class="error-message">{{error}}</p>
         </div>
         <form @submit.prevent="logIn">
           <div class="input-box">
@@ -32,7 +32,7 @@
       <div v-else-if="!form" class="form-box">
         <h2>Register</h2>
         <div class="error-section" v-if="error">
-          <p class="error-message">There was an error</p>
+          <p class="error-message">{{error}}</p>
         </div>
         <form @submit.prevent="register">
           <div class="input-box">
@@ -110,6 +110,8 @@ export default {
         };
         store.dispatch('register', payload);
         toggleForm();
+      } else {
+        store.dispatch('setError', 'Passwords do not match');
       }
     };
 

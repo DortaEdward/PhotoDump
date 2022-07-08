@@ -119,6 +119,33 @@ header{
   align-items: center;
   justify-content: center;
 }
+.upload{
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  left:0;
+  top:0;
+  background:rgba(0, 0, 0, .4);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-form{
+  width: max(50%,350px);
+  height: max(70%,180px);
+  background: white;
+  display:flex;
+  flex-direction: column;
+  border-radius: 0.7rem;
+}
+.upload-form-header{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  padding: 0.6rem 2rem;
+  border-bottom:1px solid rgb(181, 181, 181);
+}
+
 .user{
   display:flex;
   align-items: center;

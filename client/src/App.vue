@@ -20,8 +20,10 @@ export default {
   font-family: 'Source Code Pro', monospace;
 }
 body {
-
   background:rgb(222, 222, 222);
+}
+#app{
+  position:relative;
 }
 
 </style>

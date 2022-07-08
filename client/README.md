@@ -1,8 +1,7 @@
 # ToDo
 ## MVP
-* [ ] Register form
-  * [ ] Register Api call
-  * [ ] Redirect to Login page
+* [ x] Register form
+  * [ x] Register Api call
 * [ ] Upload Image
   * [ ] Connect to Firebase
   * [ ] Multi-step form
